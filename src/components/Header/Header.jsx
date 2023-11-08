@@ -180,7 +180,6 @@ const Header = () => {
                     <SearchData></SearchData>
                 </div>
             </div>
-
         </div>
     );
 };
