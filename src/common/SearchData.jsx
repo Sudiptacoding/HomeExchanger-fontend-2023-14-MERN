@@ -42,7 +42,7 @@ function SearchData() {
                         formatResult={formatResult}
                         fuseOptions={{ keys: ["serviceName", "userName"] }}
                         resultStringKeyName="serviceName"
-                        placeholder='Enter your data'
+                        placeholder='Enter your Service name'
                     />
                 </div>
             </header>
