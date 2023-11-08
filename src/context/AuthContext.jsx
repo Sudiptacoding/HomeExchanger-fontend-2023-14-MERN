@@ -9,7 +9,6 @@ const AuthContext = ({ children }) => {
     const [loader, setLoader] = useState(true)
     const [userPhoto, setUserPhoto] = useState('')
 
-
     const handelGoogle = () => {
         setLoader(true)
         return signInWithPopup(auth, provider)
@@ -38,20 +37,15 @@ const AuthContext = ({ children }) => {
         }
     }, [])
 
-
-
     const sendValue = {
         createUser,
         signIn,
         logOut,
         handelGoogle,
-
-        // 
         user,
         loader,
         setUserPhoto,
         userPhoto,
-
     }
     return (
         <UserProvider.Provider value={sendValue}>
