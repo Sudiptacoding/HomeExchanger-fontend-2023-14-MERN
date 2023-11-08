@@ -8,11 +8,8 @@ const TypewriterComponents = () => {
             <div className='bg-[#000000a8]  text-white flex items-center justify-center text-center'>
                 <div>
                     <div>
-
                         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-
                             <div class="mt-20 grid gap-6 grid-cols-2 sm:gap-12 lg:grid-cols-3 lg:gap-8">
-
                                 <div>
                                     <h4 class="text-lg sm:text-xl font-semibold text-white dark:text-gray-200">Favorite criteria rate</h4>
                                     <p className='mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-white'>
@@ -34,7 +31,6 @@ const TypewriterComponents = () => {
                                         />
                                     </p>
                                 </div>
-
                                 <div>
                                     <h4 class="text-lg sm:text-xl font-semibold text-white dark:text-gray-200">Houses based rate</h4>
                                     <p className='mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-white'>
@@ -56,7 +52,6 @@ const TypewriterComponents = () => {
                                         />
                                     </p>
                                 </div>
-
                                 <div>
                                     <h4 class="text-lg sm:text-xl font-semibold text-white dark:text-gray-200">Accuracy rate</h4>
                                     <p className='mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-white'>
@@ -78,16 +73,9 @@ const TypewriterComponents = () => {
                                         />
                                     </p>
                                 </div>
-
-        
-              
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>

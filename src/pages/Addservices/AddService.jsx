@@ -64,7 +64,7 @@ const AddService = () => {
 
         <div className='dark:bg-slate-800'>
             <Helmet>
-                <title>Add services</title>
+                <title>HomeExchanger-Add services</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <div className="max-w-4xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-14">

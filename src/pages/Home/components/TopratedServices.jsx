@@ -41,7 +41,6 @@ const TopratedServices = () => {
                         <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
                             <img class="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl" src="https://image.homeexchange.fr/images/home/4083591/2140244/1752642896683610.jpg?quality=80&height=350&keep-ratio=true" alt="Image Description" />
                         </div>
-
                         <div class="mt-7">
                             <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-200">
                                 Onsite

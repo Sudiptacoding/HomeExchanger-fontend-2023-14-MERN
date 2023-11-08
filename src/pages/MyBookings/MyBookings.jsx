@@ -34,16 +34,13 @@ const MyBookings = () => {
     }
 
     if (isPending) return <Loader></Loader>
-
     if (error) return 'An error has occurred: ' + error.message
-
     return (
         <div className='dark:bg-gray-900'>
             <Helmet>
-                <title>My bookings</title>
+                <title>HomeExchanger-My bookings</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
-
             <div className="text-center">
                 <h2 className="pt-10 mb-4 text-4xl font-black text-black dark:text-white">
                     Your all Booking services
@@ -52,8 +49,6 @@ const MyBookings = () => {
                     You can delete your booking servise.When need new services you can add new services.
                 </h3>
             </div>
-
-
             {
                 data?.length > 0 ? <div className=''>
                     {
@@ -162,11 +157,8 @@ const MyBookings = () => {
                                                     </div>
                                                 </footer>
                                             </blockquote>
-
                                         </div>
-
                                     </div>
-
                                 </div>
                             </div>
                         })

@@ -17,7 +17,6 @@ const Myservices = () => {
                 setSingleItemData(res.data)
                 document.getElementById('my_modal_3').showModal()
             })
-
     }
 
     const handelDelete = (id) => {
@@ -42,17 +41,15 @@ const Myservices = () => {
                     })
             }
         });
-
     }
 
     if (isPending) return <Loader></Loader>
-
     if (error) return 'An error has occurred: ' + error.message
 
     return (
         <div className='dark:bg-gray-900'>
             <Helmet>
-                <title>My services</title>
+                <title>HomeExchanger-My services</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <div className="text-center">

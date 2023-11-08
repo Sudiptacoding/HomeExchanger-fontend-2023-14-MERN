@@ -17,7 +17,7 @@ const AllServices = () => {
     return (
         <div className='dark:bg-gray-900'>
             <Helmet>
-                <title>All services</title>
+                <title>HomeExchanger-All services</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <div className='py-8'> <input className='block w-1/2 px-5 py-3 mx-auto text-sm border border-gray-200 rounded-full focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400' onChange={(e) => setSearch(e.target.value)} type="search" placeholder='Search Your services name' /></div>

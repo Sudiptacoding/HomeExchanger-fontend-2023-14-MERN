@@ -5,12 +5,7 @@ import { Link } from 'react-router-dom';
 const Slider = () => {
     return (
         <div>
-
             <div className="relative overflow-hidden bg-white dark:text-gray-100 dark:bg-gray-900">
-
-
-
-
                 <div className="container relative flex flex-col px-4 py-16 mx-auto space-y-16 text-center lg:flex-row lg:space-y-0 lg:text-left xl:max-w-7xl lg:px-8 lg:py-32">
                     <div className="lg:w-1/2 lg:flex lg:items-center">
                         <div>
@@ -46,7 +41,6 @@ const Slider = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     );

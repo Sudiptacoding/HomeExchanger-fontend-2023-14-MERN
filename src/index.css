@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 .my-element1 {
     --animate-duration: 50s;
 }
@@ -16,10 +14,6 @@
     --animate-duration: 40s;
 }
 
-
-
-
-
 body {
     --black: #111111;
     --white: #fdfdfd;
@@ -30,10 +24,8 @@ body {
     --orange: #ee4444;
     --yellow: #ffcc00;
     --mustard: #ffaa00;
-
     --background: var(--white);
     --accent: var(--black);
-
     margin: 0;
     padding: 0;
     background-color: var(--background);
@@ -46,8 +38,6 @@ body {
     font-style: normal;
     -webkit-font-smoothing: antialiased;
 }
-
-
 
 code {
     font-family: input-mono, monospace;

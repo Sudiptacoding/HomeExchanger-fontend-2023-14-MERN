@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { UserProvider } from '../../context/AuthContext';
 import toast from 'react-hot-toast';
-import swal from 'sweetalert';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import useAxios from '../../hooks/useAxios';
 import { Helmet } from 'react-helmet';
@@ -52,7 +51,7 @@ const Login = () => {
     return (
         <div>
             <Helmet>
-                <title>Login</title>
+                <title>HomeExchanger-Login</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <section className="">

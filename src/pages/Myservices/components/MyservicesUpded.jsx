@@ -1,12 +1,7 @@
-
 import React, { useContext, useState } from 'react';
-import { AiOutlineEye } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-
 import axios from 'axios';
 import 'animate.css';
 import toast from 'react-hot-toast';
-
 import { UserProvider } from '../../../context/AuthContext';
 import useAxios from '../../../hooks/useAxios';
 import swal from 'sweetalert';
@@ -46,7 +41,7 @@ const MyservicesUpded = (props) => {
         e.preventDefault();
         const serviceName = e.target.serviceName.value;
         const serviceArea = e.target.serviceArea.value;
-        const serviceImage = imgUplode ;      
+        const serviceImage = imgUplode;
         const category = e.target.category.value;
         const price = e.target.price.value;
         const textarea = e.target.textarea.value;
@@ -65,13 +60,11 @@ const MyservicesUpded = (props) => {
     return (
 
         <div className='dark:bg-slate-800'>
-
             <div className="max-w-4xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-14">
                 <form onSubmit={handelSubmit}>
                     <div className="bg-white shadow rounded-xl dark:bg-slate-900">
                         <div className="relative h-40 rounded-t-xl bg-[url('https://images.pexels.com/photos/1022928/pexels-photo-1022928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-no-repeat bg-cover bg-center  ">
                             <div className="absolute top-0 right-0 p-4">
-
                             </div>
                         </div>
                         <div className="p-4 pt-0 sm:pt-0 sm:p-7">
@@ -81,13 +74,10 @@ const MyservicesUpded = (props) => {
                                     <label className="sr-only">
                                         Product photo
                                     </label>
-
                                     <div className="grid sm:flex sm:items-center sm:gap-x-5">
                                         <img className="relative z-10 inline-block w-24 h-24 mx-auto -mt-8 rounded-full sm:mx-0 ring-4 ring-white dark:ring-gray-800" src={user?.photoURL} alt="Image Description" />
-
                                         <div className="mt-4 sm:mt-auto sm:mb-1.5 flex justify-center sm:justify-start gap-2">
                                             <button type="button" className="inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 align-middle transition-all bg-white border rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
-
                                                 {user?.displayName}
                                             </button>
                                             <button type="button" className="inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-red-600 align-middle transition-all bg-white border rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-red-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
@@ -96,21 +86,18 @@ const MyservicesUpded = (props) => {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Service Name
                                     </label>
                                     <input defaultValue={serviceName} name='serviceName' id="af-submit-app-project-name" type="text" className="block w-full px-3 py-2 text-sm border-gray-200 rounded-lg shadow-sm pr-11 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" placeholder="Enter Service Name" />
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Service Area
                                     </label>
                                     <input defaultValue={serviceArea} name='serviceArea' id="af-submit-project-url" type="text" className="block w-full px-3 py-2 text-sm border-gray-200 rounded-lg shadow-sm pr-11 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" placeholder="Enter Service Area" />
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Service image
@@ -130,15 +117,11 @@ const MyservicesUpded = (props) => {
                                             Please input jpeg/png
                                         </span>
                                     </label>
-
-
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Category
                                     </label>
-
                                     <select defaultValue={category} name='category' id="af-submit-app-category" className="block w-full px-3 py-2 text-sm border-gray-200 rounded-lg shadow-sm pr-9 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
                                         <option value='Homes with swimming pool'>Homes with swimming pool</option>
                                         <option value='Pet friendly homes'>Pet friendly homes</option>
@@ -148,7 +131,6 @@ const MyservicesUpded = (props) => {
                                         <option value='Homes with BBQ'>Homes with BBQ</option>
                                     </select>
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Price
@@ -170,12 +152,8 @@ const MyservicesUpded = (props) => {
                             </div>
                         </div>
                     </div>
-
                 </form>
             </div>
-
-
-
             <div id="hs-bg-gray-on-hover-cards" className="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
                 <div className="m-3 mt-0 transition-all ease-out opacity-0 hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 sm:max-w-lg sm:w-full sm:mx-auto">
                     <div className="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-gray-800">

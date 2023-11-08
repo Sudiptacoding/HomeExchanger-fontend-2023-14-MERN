@@ -46,10 +46,9 @@ const MyPaindingWork = () => {
     return (
         <div className='dark:bg-gray-900'>
             <Helmet>
-                <title>My Painding work</title>
+                <title>HomeExchanger-My Painding work</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
-
             <div>
                 {
                     data?.length > 0 ?

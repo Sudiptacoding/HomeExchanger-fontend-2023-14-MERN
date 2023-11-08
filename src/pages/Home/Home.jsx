@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div className='dark:bg-gray-900'>
             <Helmet>
-                <title>Home</title>
+                <title>HomeExchanger-Home</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <Slider></Slider>

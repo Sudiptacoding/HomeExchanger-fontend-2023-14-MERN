@@ -53,17 +53,27 @@ const Registration = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         const checkbox = e.target.checkbox.checked;
-        console.log(name, photo)
-
         if (!checkbox) {
             toast.error("Please add Terms and Conditions")
             return
         }
 
+        const isValidCarPassword = /^(?=.*[A-Z]).+$/.test(password);
+        const isValidSpacialPassword = /^(?=.*[A-Z])(?=.*[^A-Za-z0-9]).+$/.test(password);
+
         if (password.length < 6) {
-            return toast.error("PLease provide 6 character password")
+            toast.error("PLease provide 6 character password")
+            return
         }
 
+        if (!isValidCarPassword) {
+            toast.error("PLease provide capital letter")
+            return
+        }
+        if (!isValidSpacialPassword) {
+            toast.error("PLease provide special character")
+            return
+        }
         createUser(email, password)
             .then(() => {
                 updateProfile(auth.currentUser, {
@@ -94,15 +104,12 @@ const Registration = () => {
                         navigate(location?.state ? location.state : '/')
                     })
             })
-
     }
-
-
 
     return (
         <div>
             <Helmet>
-                <title>Registration</title>
+                <title>HomeExchanger-Registration</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <section className="">
@@ -112,7 +119,6 @@ const Registration = () => {
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                                 Create your Free Account
                             </h1>
-
                             <a onClick={handelGoogleSignin} class="flex items-center justify-center cursor-pointer w-full py-4 mb-6 text-sm font-medium transition duration-300 rounded-2xl text-grey-900 bg-[#f9fafb] hover:bg-grey-400 focus:ring-4 focus:ring-grey-300">
                                 <img class="h-5 mr-2" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-google.png" alt="" />
                                 Sign in with Google
@@ -131,12 +137,10 @@ const Registration = () => {
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Please select your profile image</label>
                                     <input onChange={handelFileData} type="file" name="file-input" id="file-input" className="block w-full text-sm border border-gray-200 rounded-md shadow-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 file:bg-transparent file:border-0 file:bg-gray-100 file:mr-4 file:py-3 file:px-4 dark:file:bg-gray-700 dark:file:text-gray-400" required={true} />
                                 </div>
-
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
                                     <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email@gmail.com" required={true} />
                                 </div>
-
                                 <div className='relative'>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
                                     <input type={see ? 'password' : 'text'} name="password" id="password" placeholder="Password" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required={true} />
@@ -145,7 +149,6 @@ const Registration = () => {
                                 <div className="inline-flex items-center " style={{ marginTop: '0px' }}>
                                     <label
                                         className="relative -ml-2.5 flex cursor-pointer items-center rounded-full p-3"
-
                                         data-ripple-dark="true"
                                     >
                                         <input
@@ -173,13 +176,11 @@ const Registration = () => {
                                     </label>
                                     <label
                                         className="mt-px font-light text-gray-700 cursor-pointer select-none"
-
                                     >
                                         <p className="flex items-center font-sans text-sm antialiased font-normal leading-normal text-gray-700 dark:text-white">
                                             I agree the
                                             <Link
                                                 className="font-medium transition-colors hover:text-pink-500"
-
                                             >
                                                 &nbsp;Terms and Conditions
                                             </Link>
