@@ -45,10 +45,7 @@ const Header = () => {
                                     className={({ isActive, isPending }) =>
                                         isPending ? "pending" : isActive ? "font-medium text-blue-600 sm:py-6 dark:text-blue-500" : "font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
                                     }
-
                                     to='/' aria-current="page">Home</NavLink>
-
-
                                 <NavLink
                                     className={({ isActive, isPending }) =>
                                         isPending ? "pending" : isActive ? "font-medium text-blue-600 sm:py-6 dark:text-blue-500" : "font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
