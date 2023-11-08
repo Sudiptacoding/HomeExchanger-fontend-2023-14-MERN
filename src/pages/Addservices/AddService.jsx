@@ -14,7 +14,6 @@ const AddService = () => {
     const axiosData = useAxios();
     const [imgUplode, setImageUplode] = useState('')
     const [showImgLode, setShowImageLode] = useState(false)
-
     const navigate = useNavigate()
     const uploadImageToImgBB = () => {
         setShowImageLode(false)
@@ -42,7 +41,6 @@ const AddService = () => {
             });
     };
 
-
     const handelSubmit = (e) => {
         e.preventDefault();
         const serviceName = e.target.serviceName.value;
@@ -55,14 +53,11 @@ const AddService = () => {
         const userEmail = user?.email || null
         const userPhoto = user?.photoURL || null
         const data = { serviceName, serviceArea, serviceImage, category, price, textarea, userEmail, userName, userPhoto }
-
         axiosData.post('/addservice', data)
             .then(res => {
                 swal("Good job!", "You service sucessfully added!", "success");
                 navigate('/')
             })
-
-
     }
 
     return (
@@ -72,7 +67,6 @@ const AddService = () => {
                 <title>Add services</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
-
             <div className="max-w-4xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-14">
                 <form onSubmit={handelSubmit}>
                     <div className="bg-white shadow rounded-xl dark:bg-slate-900">
@@ -86,7 +80,6 @@ const AddService = () => {
                                     <label className="sr-only">
                                         Product photo
                                     </label>
-
                                     <div className="grid sm:flex sm:items-center sm:gap-x-5">
                                         <img className="relative z-10 inline-block w-24 h-24 mx-auto -mt-8 rounded-full sm:mx-0 ring-4 ring-white dark:ring-gray-800" src={user?.photoURL} alt="Image Description" />
 
@@ -101,21 +94,18 @@ const AddService = () => {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Service Name
                                     </label>
                                     <input name='serviceName' id="af-submit-app-project-name" type="text" className="block w-full px-3 py-2 text-sm border-gray-200 rounded-lg shadow-sm pr-11 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" placeholder="Enter Service Name" />
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Service Area
                                     </label>
                                     <input name='serviceArea' id="af-submit-project-url" type="text" className="block w-full px-3 py-2 text-sm border-gray-200 rounded-lg shadow-sm pr-11 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" placeholder="Enter Service Area" />
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Service image
@@ -142,14 +132,11 @@ const AddService = () => {
                                                 </span>
                                             </label>
                                     }
-
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Category
                                     </label>
-
                                     <select name='category' id="af-submit-app-category" className="block w-full px-3 py-2 text-sm border-gray-200 rounded-lg shadow-sm pr-9 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
                                         <option selected>Select a category</option>
                                         <option value='Homes with swimming pool'>Homes with swimming pool</option>
@@ -160,14 +147,12 @@ const AddService = () => {
                                         <option value='Homes with BBQ'>Homes with BBQ</option>
                                     </select>
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Price
                                     </label>
                                     <input name='price' id="af-submit-app-project-name" type="number" className="block w-full px-3 py-2 text-sm border-gray-200 rounded-lg shadow-sm pr-11 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" placeholder="Enter Service Price" />
                                 </div>
-
                                 <div className="space-y-2">
                                     <label className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-gray-200">
                                         Description
@@ -182,7 +167,6 @@ const AddService = () => {
                             </div>
                         </div>
                     </div>
-
                 </form>
             </div>
             <div id="hs-bg-gray-on-hover-cards" className="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
