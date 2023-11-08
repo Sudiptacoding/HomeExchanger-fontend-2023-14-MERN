@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { UserProvider } from '../context/AuthContext';
 import axios from 'axios';
 
 const instance = axios.create({
-    // baseURL: 'https://backend-lmr9alq3n-sudiptacoding.vercel.app',
-    baseURL: 'https://backend-66p8f71fp-sudiptacoding.vercel.app',
+    baseURL: 'https://backend-lac-nine.vercel.app',
+
     withCredentials: true
 });
 
