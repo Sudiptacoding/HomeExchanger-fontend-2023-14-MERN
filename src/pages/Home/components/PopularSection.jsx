@@ -7,12 +7,9 @@ import useCatagoryServices from '../../../hooks/useCatagoryServices';
 import Loader from '../../../common/Loader';
 
 const PopularSection = () => {
-    const { isLoading, error, data, refetch } = useCatagoryServices();
-    console.log(data)
+    const { isLoading, error, data } = useCatagoryServices();
     if (isLoading) return <Loader></Loader>
-
     if (error) return 'An error has occurred: ' + error.message
-
     return (
         <div id='popular' class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto dark:bg-gray-900">
             <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
