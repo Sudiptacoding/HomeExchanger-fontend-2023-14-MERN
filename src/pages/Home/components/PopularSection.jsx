@@ -1,6 +1,4 @@
 import React from 'react';
-
-import Footer from '../../../components/Footer/Footer';
 import { AiOutlineEye } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import useCatagoryServices from '../../../hooks/useCatagoryServices';
