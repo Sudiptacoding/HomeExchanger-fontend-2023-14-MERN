@@ -2,13 +2,10 @@ import React, { useContext } from 'react';
 import { UserProvider } from '../../context/AuthContext';
 import useAxios from '../../hooks/useAxios';
 import swal from 'sweetalert';
-
 const BookingServices = (props) => {
     const { serviceName, serviceArea, serviceImage, category, price, textarea, userEmail, userName, userPhoto } = props.data;
     const { user } = useContext(UserProvider);
-
     const axiosData = useAxios()
-
     const handelPurchaseServices = (e) => {
         e.preventDefault();
         const address = e.target.address.value;
@@ -27,12 +24,9 @@ const BookingServices = (props) => {
             })
     }
 
-
     return (
         <div>
-
             <div className="max-w-4xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-14">
-
                 <div className="p-4 bg-white shadow rounded-xl sm:p-7 dark:bg-slate-900">
                     <div className="mb-8">
                         <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">
@@ -75,7 +69,6 @@ const BookingServices = (props) => {
                                         </span>
                                     </div>
                                 </div>
-
                             </div>
                             <div className="sm:col-span-9">
                                 <div className="sm:flex">
@@ -95,8 +88,6 @@ const BookingServices = (props) => {
                             <div className="sm:col-span-9">
                                 <input disabled defaultValue={price} id="af-account-email" type="email" className="block w-full px-3 py-2 text-sm border-gray-200 rounded-lg shadow-sm pr-11 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" />
                             </div>
-
-
                             <div className="sm:col-span-3">
                                 <label className="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200">
                                     Special instruction
@@ -123,7 +114,6 @@ const BookingServices = (props) => {
                                     <img className='h-[200px] w-full object-cover rounded-lg' src={serviceImage} alt="" />
                                 </div>
                             </div>
-
                             <div className="sm:col-span-3">
                                 <label className="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200">
                                     Date
@@ -147,10 +137,7 @@ const BookingServices = (props) => {
                             <div className="sm:col-span-9">
                                 <textarea name='splan' required id="af-account-bio" className="block w-full px-3 py-2 text-sm border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" rows="6" placeholder="Type your message..."></textarea>
                             </div>
-
                         </div>
-
-
                         <div className="flex justify-end mt-5 gap-x-2">
                             <button onClick={() => document.getElementById('my_modal_10').close()} type="button" className="inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 align-middle transition-all bg-white border rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
                                 Cancel
@@ -161,11 +148,8 @@ const BookingServices = (props) => {
                         </div>
                     </form>
                 </div>
-
             </div>
-
         </div>
-
     );
 };
 
