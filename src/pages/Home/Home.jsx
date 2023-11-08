@@ -7,9 +7,7 @@ import FeatureOrBanefit from './components/FeatureOrBanefit';
 import PriceingSection from './components/PriceingSection';
 import TypewriterComponents from './components/TypewriterComponents';
 
-
 const Home = () => {
-
     return (
         <div className='dark:bg-gray-900'>
             <Helmet>
@@ -22,7 +20,6 @@ const Home = () => {
             <FeatureOrBanefit></FeatureOrBanefit>
             <TypewriterComponents></TypewriterComponents>
             <PriceingSection></PriceingSection>
-
         </div >
     );
 }
