@@ -3,8 +3,6 @@ import { useContext } from 'react';
 import { UserProvider } from '../context/AuthContext';
 import useAxios from './useAxios';
 
-
-
 const useMyBookings = () => {
     const { user } = useContext(UserProvider)
     const axiosData = useAxios();

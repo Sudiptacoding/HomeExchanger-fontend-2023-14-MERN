@@ -3,8 +3,6 @@ import useAxios from './useAxios';
 import { useContext } from 'react';
 import { UserProvider } from '../context/AuthContext';
 
-
-
 const usePaindingWork = () => {
     const { user } = useContext(UserProvider)
     const axiosData = useAxios();
