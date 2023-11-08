@@ -16,7 +16,6 @@ function SearchData() {
     }, [])
     const handleOnSelect = (item) => {
         navigate(`/services/${item._id}`)
-
     }
     const formatResult = (item) => {
         return (
