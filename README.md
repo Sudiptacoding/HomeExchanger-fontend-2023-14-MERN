@@ -17,4 +17,36 @@ Top 5 feature of my website is :-
 - On our website you will find Dakmul options which will improve your user experience and our website is fully mobile and tablet responsive so you can view our website from all devices as per your requirement.
 
 
+Uses Packages
+- animate.css
+    - react-animated-slider
+    - react-avatar-group
+    - react-confetti
+    - react-datepicker
+    - react-headroom
+    - aos
+    - firebase
+    - localforage
+    - match-sorter
+    - react
+    - react-dom
+    - react-hot-toast
+    - react-icons
+    - react-router-dom
+    - react-simple-typewriter
+    - react-slideshow-image
+    - sweetalert2
+    - react-share
+    - react-helmet
+    - react-modal
+    - react-hot-toast
+    - react-parallax
+    - react-search-autocomplete
+    - react-slick
+    - react-star-ratings
+    - react-slideshow-image
+    - react-tabs
+    - slick-carousel
+    - react-tooltip
+    - framer-motion
 
