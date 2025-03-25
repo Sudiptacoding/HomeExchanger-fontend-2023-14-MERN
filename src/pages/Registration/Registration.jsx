@@ -19,7 +19,7 @@ const Registration = () => {
     const location = useLocation();
 
     const handelFileData = (e) => {
-        const imgbbApiKey = '48262f7096c971f7f2f1b695ae2a6be0';
+        const imgbbApiKey = '9d5e814c7c5f4867978ca6169e144b8b';
         const selectedFile = e.target.files[0];
         const inputType = selectedFile.type.split('/')[1];
         if (inputType !== 'png' && inputType !== 'jpeg') {
@@ -94,17 +94,17 @@ const Registration = () => {
             })
     }
 
-    const handelGoogleSignin = () => {
-        handelGoogle()
-            .then(res => {
-                const email = res.user.email
-                axiosAuth.post('/jwt', { email })
-                    .then(() => {
-                        swal("Sucess!", `User created sucessfully`, "success");
-                        navigate(location?.state ? location.state : '/')
-                    })
-            })
-    }
+    // const handelGoogleSignin = () => {
+    //     handelGoogle()
+    //         .then(res => {
+    //             const email = res.user.email
+    //             axiosAuth.post('/jwt', { email })
+    //                 .then(() => {
+    //                     swal("Sucess!", `User created sucessfully`, "success");
+    //                     navigate(location?.state ? location.state : '/')
+    //                 })
+    //         })
+    // }
 
     return (
         <div>
@@ -113,21 +113,21 @@ const Registration = () => {
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <section className="">
-                <div className="flex flex-col items-center justify-start h-screen py-5 mx-auto shadow lg:pt-20 dark:border dark:bg-gray-800 dark:border-gray-700">
+                <div className="flex flex-col items-center justify-start h-fit py-5 mx-auto shadow lg:pt-20 dark:border dark:bg-gray-800 dark:border-gray-700">
                     <div className="w-full rounded-lg shadow-none lg:shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 backdrop-blur-xl">
                         <div className="space-y-4 p-7 lg:p-6 md:space-y-6 ">
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                                 Create your Free Account
                             </h1>
-                            <a onClick={handelGoogleSignin} class="flex items-center justify-center cursor-pointer w-full py-4 mb-6 text-sm font-medium transition duration-300 rounded-2xl text-grey-900 bg-[#f9fafb] hover:bg-grey-400 focus:ring-4 focus:ring-grey-300">
+                            {/* <a onClick={handelGoogleSignin} class="flex items-center justify-center cursor-pointer w-full py-4 mb-6 text-sm font-medium transition duration-300 rounded-2xl text-grey-900 bg-[#f9fafb] hover:bg-grey-400 focus:ring-4 focus:ring-grey-300">
                                 <img class="h-5 mr-2" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-google.png" alt="" />
-                                Sign in with Google
-                            </a>
-                            <div class="flex items-center mb-3">
+                               
+                            </a> */}
+                            {/* <div class="flex items-center mb-3">
                                 <hr class="h-0 border-b border-solid border-grey-500 grow" />
                                 <p class="mx-4 text-grey-600">or</p>
                                 <hr class="h-0 border-b border-solid border-grey-500 grow" />
-                            </div>
+                            </div> */}
                             <form onSubmit={handelRegistration} className="space-y-4 md:space-y-6" action="#">
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>

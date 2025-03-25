@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://home-exchanger-backend-2023-14-mern.vercel.app',
     withCredentials: true
 });
 

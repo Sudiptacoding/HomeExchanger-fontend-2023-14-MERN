@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import useAxios from '../../hooks/useAxios';
 import { Helmet } from 'react-helmet';
+import { FaRegCopy } from "react-icons/fa";
 
 
 const Login = () => {
@@ -48,6 +49,20 @@ const Login = () => {
             })
     }
 
+
+    const handleCopy = (text) => {
+        navigator.clipboard.writeText(text);
+        toast.success(`Copied: ${text}`, {
+            duration: 2000,
+            position: "top-right",
+        });
+    };
+
+    const users = [
+        { role: "User Login", email: "sudiptabiswas506@gmail.com", password: "Sudiptabiswas506@gmail.com" },
+
+    ];
+
     return (
         <div>
             <Helmet>
@@ -55,21 +70,41 @@ const Login = () => {
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <section className="">
-                <div className="flex flex-col items-center justify-start h-screen py-20 mx-auto shadow lg:px-6 lg:py-28 dark:border dark:bg-gray-800 dark:border-gray-700" >
+                <div className="flex flex-col items-center justify-start h-fit py-20 mx-auto shadow lg:px-6 lg:py-28 dark:border dark:bg-gray-800 dark:border-gray-700" >
                     <div className="w-full bg-white rounded-lg shadow-none backdrop-blur-xl lg:shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="space-y-4 p-7 lg:p-6 md:space-y-6">
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                                 Sign in to your account
                             </h1>
 
-                            <a onClick={handelGoogleSignin} class="flex items-center cursor-pointer justify-center w-full py-4 mb-6 text-sm font-medium transition duration-300 rounded-2xl text-grey-900 bg-[#f9fafb] hover:bg-grey-400 focus:ring-4 focus:ring-grey-300">
-                                <img class="h-5 mr-2" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-google.png" alt="" />
-                                Sign in with Google
-                            </a>
-                            <div class="flex items-center mb-3">
-                                <hr class="h-0 border-b border-solid border-grey-500 grow" />
-                                <p class="mx-4 text-grey-600">or</p>
-                                <hr class="h-0 border-b border-solid border-grey-500 grow" />
+                            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center max-w-md mx-auto">
+                          
+
+                                {users.map((user, index) => (
+                                    <div key={index} className="mb-6">
+                                        <p className="text-2xl font-bold text-gray-800 drop-shadow-md">{user.role}</p>
+
+                                        <div className="flex items-center justify-between bg-white p-3 rounded-md mt-2 shadow-sm">
+                                            <h5 className="text-lg font-semibold text-gray-700">
+                                                Email: <span className="text-blue-600">{user.email}</span>
+                                            </h5>
+                                            <FaRegCopy
+                                                className="text-gray-500 cursor-pointer hover:text-blue-600 transition-all"
+                                                onClick={() => handleCopy(user.email)}
+                                            />
+                                        </div>
+
+                                        <div className="flex items-center justify-between bg-white p-3 rounded-md mt-2 shadow-sm">
+                                            <h6 className="text-md text-gray-600">
+                                                Password: <span className="text-red-500">{user.password}</span>
+                                            </h6>
+                                            <FaRegCopy
+                                                className="text-gray-500 cursor-pointer hover:text-red-500 transition-all"
+                                                onClick={() => handleCopy(user.password)}
+                                            />
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
 
 
